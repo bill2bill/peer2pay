@@ -68,7 +68,7 @@ public class AddCard extends AppCompatActivity {
 
     void validateFields(){
         validatePostcode(postcode, "[a-zA-Z0-9]{6}");
-        validateExpire(expire, ".*");
+        validateExpire(expire, "\\d{2}/\\d{2}");
         validateAcountNumber(account_number, "\\d{8}");
         validateSortcode(sortcode, "\\d{6}");
         validateCvc(cvc, "\\d{3}");

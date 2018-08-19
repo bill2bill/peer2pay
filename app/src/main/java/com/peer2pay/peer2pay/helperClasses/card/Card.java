@@ -4,7 +4,7 @@ import com.peer2pay.peer2pay.helperClasses.Maths;
 import com.peer2pay.peer2pay.helperClasses.Security;
 
 public class Card {
-    private Maths maths;
+    private Maths maths = new Maths();
 
     public Card(String key, String cardNumber, String cardType, String date, String cvc, String postcode, String sortCode, String accountNumber, int ID) {
         this.key = key;

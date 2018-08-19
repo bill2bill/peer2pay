@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import com.peer2pay.peer2pay.helperClasses.management.CardManagement;
 import com.peer2pay.peer2pay.helperClasses.management.FileManagement;
 import com.peer2pay.peer2pay.helperClasses.MyAdapter;
 import com.peer2pay.peer2pay.R;
@@ -14,7 +15,7 @@ import com.peer2pay.peer2pay.R;
 import java.util.Map;
 
 public class Cards extends AppCompatActivity {
-    FileManagement fileManagement;
+    CardManagement cardManagement;
     MyAdapter mAdapter;
     RecyclerView mRecyclerView;
 
@@ -26,8 +27,8 @@ public class Cards extends AppCompatActivity {
         mRecyclerView = findViewById(R.id.recyclerView);
 
         //Get list of stored cards
-        fileManagement = new FileManagement(getApplicationContext());
-        Map<String, ?> cards = fileManagement.getAllCards();
+        cardManagement = new CardManagement(getApplicationContext());
+        Map<String, ?> cards = cardManagement.getAllCards();
         String[] data = cards.values().toArray(new String[0]);
 
         // use this setting to improve performance if you know that changes
