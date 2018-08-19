@@ -25,8 +25,6 @@ public class CardManagement extends FileManagement {
     }
 
     public JsonNode getCardAsJson(String name){
-        //TODO make this class abstract
-        //TODO this class should only contain information about files
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             return objectMapper.readTree(getSharedPreferenceString(name));
