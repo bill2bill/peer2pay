@@ -6,13 +6,12 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.peer2pay.peer2pay.helperClasses.management.CardManagement;
-import com.peer2pay.peer2pay.helperClasses.management.FileManagement;
-import com.peer2pay.peer2pay.helperClasses.InputValidator;
+import com.peer2pay.peer2pay.helperClasses.fileManagement.CardFileManagement;
+import com.peer2pay.peer2pay.helperClasses.validation.InputValidator;
 import com.peer2pay.peer2pay.R;
 
 public class AddCard extends AppCompatActivity {
-    CardManagement cardManagement;
+    CardFileManagement cardFileManagement;
     private boolean isValidPostcode;
     private boolean isValidExpire;
     private boolean isValid_Account_number;
@@ -46,7 +45,7 @@ public class AddCard extends AppCompatActivity {
 
         validView = findViewById(R.id.valid);
 
-        cardManagement = new CardManagement(getApplicationContext());
+        cardFileManagement = new CardFileManagement(getApplicationContext());
 
         validateFields();
     }
@@ -54,7 +53,7 @@ public class AddCard extends AppCompatActivity {
     public void submit(View view){
         validateFields();
         if (isValidForm()){
-            cardManagement.newCard(getKey(), getCardNumber(), "", getExpire(), getCvc(), getPostCode(), getSortcode(), getAccount_Number());
+            cardFileManagement.newCard(getKey(), getCardNumber(), "", getExpire(), getCvc(), getPostCode(), getSortcode(), getAccount_Number());
             setContentView(R.layout.activity_cards);
         }
         validView.setText(R.string.Incomplete);

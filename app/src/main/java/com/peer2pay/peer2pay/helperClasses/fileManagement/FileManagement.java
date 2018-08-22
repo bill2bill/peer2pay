@@ -1,15 +1,7 @@
-package com.peer2pay.peer2pay.helperClasses.management;
+package com.peer2pay.peer2pay.helperClasses.fileManagement;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.NullNode;
-import com.peer2pay.peer2pay.helperClasses.card.Card;
-
-import java.io.IOException;
-import java.util.Map;
 
 public abstract class FileManagement {
     private final static String PREFERENCE = "info";

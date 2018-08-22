@@ -9,6 +9,7 @@ import org.apache.commons.codec.digest.DigestUtils;
 
 public class Security {
     private final static String IV = "<P33r2P@Y,>";
+    private final static String EMPTY = "";
 
     public String oneWayHash(String input){
         return DigestUtils.sha256Hex(input);
@@ -30,7 +31,7 @@ public class Security {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-        return null;
+        return EMPTY;
     }
 
     public static String decrypt(String key, String encrypted) {
@@ -47,6 +48,6 @@ public class Security {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-        return null;
+        return EMPTY;
     }
 }

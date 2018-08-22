@@ -26,7 +26,7 @@ public class Menu extends AppCompatActivity {
     }
 
     public void cards(View view){
-        Intent cards_intent = new Intent(this, Cards.class);
+        Intent cards_intent = new Intent(this, ConfigureCards.class);
         startActivity(cards_intent);
     }
 }

@@ -1,4 +1,4 @@
-package com.peer2pay.peer2pay.helperClasses.management;
+package com.peer2pay.peer2pay.helperClasses.fileManagement;
 
 import android.content.Context;
 
@@ -10,8 +10,8 @@ import com.peer2pay.peer2pay.helperClasses.card.Card;
 import java.io.IOException;
 import java.util.Map;
 
-public class CardManagement extends FileManagement {
-    public CardManagement(Context context) {
+public class TransactionFileManagement extends FileManagement {
+    public TransactionFileManagement(Context context) {
         super(context);
     }
 
@@ -38,12 +38,4 @@ public class CardManagement extends FileManagement {
         return getSharedPreferenceString(name);
     }
 
-    public void newCard(String key, String cardNumber, String cardType, String date, String cvc, String postcode, String sortCode, String accountNumber){
-        int id = getCountID();
-        Card card = new Card(key, cardNumber, cardType, date, cvc, postcode, sortCode, accountNumber, id);
-
-        addSharedPreference("card_row" + String.valueOf(id) , card.getCardNode());
-        setCountID(id + 1);
-        //TODO put check to see if cards created
-    }
 }

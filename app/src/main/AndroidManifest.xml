@@ -21,7 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".appPages.Cards" />
+        <activity android:name=".appPages.ConfigureCards" />
         <activity android:name=".appPages.Pay" />
         <activity android:name=".appPages.Receive" />
         <activity

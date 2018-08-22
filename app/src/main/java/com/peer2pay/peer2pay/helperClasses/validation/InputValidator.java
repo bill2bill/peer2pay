@@ -1,4 +1,4 @@
-package com.peer2pay.peer2pay.helperClasses;
+package com.peer2pay.peer2pay.helperClasses.validation;
 
 import android.text.Editable;
 import android.text.TextWatcher;
