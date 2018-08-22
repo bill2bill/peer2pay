@@ -1,4 +1,4 @@
-package com.peer2pay.peer2pay.helperClasses.card;
+package com.peer2pay.peer2pay.helperClasses.objects;
 
 import com.peer2pay.peer2pay.helperClasses.Maths;
 import com.peer2pay.peer2pay.helperClasses.Security;

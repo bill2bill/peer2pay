@@ -6,7 +6,7 @@ import android.content.SharedPreferences;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.NullNode;
-import com.peer2pay.peer2pay.helperClasses.card.Card;
+import com.peer2pay.peer2pay.helperClasses.objects.Card;
 import com.peer2pay.peer2pay.helperClasses.parser.CardParser;
 
 import java.io.IOException;

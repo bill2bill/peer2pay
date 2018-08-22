@@ -5,7 +5,6 @@ import android.content.Context;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.NullNode;
-import com.peer2pay.peer2pay.helperClasses.card.Card;
 
 import java.io.IOException;
 import java.util.Map;
