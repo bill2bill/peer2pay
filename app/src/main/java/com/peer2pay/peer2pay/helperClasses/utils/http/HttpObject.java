@@ -1,4 +1,4 @@
-package com.peer2pay.peer2pay.helperClasses.http;
+package com.peer2pay.peer2pay.helperClasses.utils.http;
 
 import com.peer2pay.peer2pay.helperClasses.enums.RequestType;
 

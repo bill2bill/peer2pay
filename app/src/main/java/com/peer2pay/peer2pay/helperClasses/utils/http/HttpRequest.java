@@ -1,4 +1,4 @@
-package com.peer2pay.peer2pay.helperClasses.http;
+package com.peer2pay.peer2pay.helperClasses.utils.http;
 
 import java.io.IOException;
 

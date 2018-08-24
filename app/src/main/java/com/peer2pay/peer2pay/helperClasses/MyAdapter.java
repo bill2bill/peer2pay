@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.peer2pay.peer2pay.R;
 import com.peer2pay.peer2pay.helperClasses.objects.Card;
-import com.peer2pay.peer2pay.helperClasses.parser.CardParser;
+import com.peer2pay.peer2pay.helperClasses.utils.parser.CardParser;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private String[] mDataset;

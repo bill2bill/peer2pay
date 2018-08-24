@@ -1,4 +1,4 @@
-package com.peer2pay.peer2pay.helperClasses;
+package com.peer2pay.peer2pay.helperClasses.utils;
 
 public class Maths {
     public String lastCharacters(int numChar, String word){

@@ -1,6 +1,6 @@
 package com.peer2pay.peer2pay.helperClasses.objects;
 
-import com.peer2pay.peer2pay.helperClasses.Maths;
+import com.peer2pay.peer2pay.helperClasses.utils.Maths;
 
 public class Card {
     private Maths maths = new Maths();

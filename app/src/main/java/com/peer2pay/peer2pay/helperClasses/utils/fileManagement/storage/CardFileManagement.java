@@ -1,4 +1,4 @@
-package com.peer2pay.peer2pay.helperClasses.fileManagement;
+package com.peer2pay.peer2pay.helperClasses.utils.fileManagement.storage;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -6,8 +6,7 @@ import android.content.SharedPreferences;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.NullNode;
-import com.peer2pay.peer2pay.helperClasses.objects.Card;
-import com.peer2pay.peer2pay.helperClasses.parser.CardParser;
+import com.peer2pay.peer2pay.helperClasses.utils.parser.CardParser;
 
 import java.io.IOException;
 import java.util.List;
@@ -52,9 +51,9 @@ public class CardFileManagement extends FileManagement {
 
     public void newCard(){
         int id = getCountID();
-        String newCardNode = new Card().set(user, token, cardType, date, id).getCardNode();
+        //String newCardNode = new Card().set(user, token, cardType, date, id).getCardNode();
 
-        addSharedPreference(CARD_NAME + String.valueOf(id) , newCardNode);
+        //addSharedPreference(CARD_NAME + String.valueOf(id) , newCardNode);
         setCountID(id + 1);
         //TODO put check to see if cards created
     }

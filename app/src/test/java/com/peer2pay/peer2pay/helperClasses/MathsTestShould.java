@@ -1,9 +1,10 @@
 package com.peer2pay.peer2pay.helperClasses;
 
+import com.peer2pay.peer2pay.helperClasses.utils.Maths;
+
 import org.junit.jupiter.api.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.jupiter.api.Assertions.*;
 
 class MathsTestShould {
     private Maths maths = new Maths();

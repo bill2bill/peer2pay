@@ -1,4 +1,4 @@
-package com.peer2pay.peer2pay.helperClasses.parser;
+package com.peer2pay.peer2pay.helperClasses.utils.parser;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.peer2pay.peer2pay.helperClasses.objects.Card;

@@ -1,15 +1,15 @@
 package com.peer2pay.peer2pay.appPages;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.peer2pay.peer2pay.helperClasses.fileManagement.CardFileManagement;
-import com.peer2pay.peer2pay.helperClasses.MyAdapter;
 import com.peer2pay.peer2pay.R;
+import com.peer2pay.peer2pay.helperClasses.MyAdapter;
+import com.peer2pay.peer2pay.helperClasses.utils.fileManagement.storage.CardFileManagement;
 
 import java.util.List;
 

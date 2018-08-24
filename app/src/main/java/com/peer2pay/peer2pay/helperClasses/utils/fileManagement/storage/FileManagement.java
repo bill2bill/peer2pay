@@ -1,4 +1,4 @@
-package com.peer2pay.peer2pay.helperClasses.fileManagement;
+package com.peer2pay.peer2pay.helperClasses.utils.fileManagement.storage;
 
 import android.content.Context;
 import android.content.SharedPreferences;
