@@ -56,9 +56,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
         //set values
         id.setText(card.getId());
-        cardNumber.setText(card.getCardNumberLastDigits());
+        cardNumber.setText("#### #### #### 3456");
         expire.setText(card.getExpiration());
-
     }
 
     // Return the size of your dataset (invoked by the layout manager)

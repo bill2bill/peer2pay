@@ -15,6 +15,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class CardFileManagement extends FileManagement {
+    private final String CARD_NAME = "card_row_";
     private CardParser cardParser;
 
     public CardFileManagement(Context context) {
@@ -25,7 +26,7 @@ public class CardFileManagement extends FileManagement {
         SharedPreferences preferences = getPreference();
         Map<String, ?> allPreferences = preferences.getAll();
         return allPreferences.keySet().stream()
-                .filter(k -> k.matches("card_row_\\d+"))
+                .filter(k -> k.matches(CARD_NAME + "\\d+"))
                 .map(this::getSharedPreferenceString)
                 .collect(Collectors.toList());
     }
@@ -49,12 +50,11 @@ public class CardFileManagement extends FileManagement {
         return getSharedPreferenceString(name);
     }
 
-    public void newCard(String key, String cardNumber, String cardType, String date, String cvc, String postcode, String sortCode, String accountNumber){
+    public void newCard(){
         int id = getCountID();
-        Card card = new Card();
-        card.set(key, cardNumber, cardType, date, cvc, postcode, sortCode, accountNumber, id);
+        String newCardNode = new Card().set(user, token, cardType, date, id).getCardNode();
 
-        addSharedPreference("card_row_" + String.valueOf(id) , card.getCardNode());
+        addSharedPreference(CARD_NAME + String.valueOf(id) , newCardNode);
         setCountID(id + 1);
         //TODO put check to see if cards created
     }
