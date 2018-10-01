@@ -1,4 +1,4 @@
-package com.peer2pay.peer2pay.helperClasses;
+package com.peer2pay.peer2pay.helperClasses.utils;
 
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;

@@ -1,30 +1,27 @@
 package com.peer2pay.peer2pay.helperClasses.utils.http;
 
 import java.io.IOException;
+import java.util.Objects;
 
 import okhttp3.Headers;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
-import okhttp3.ResponseBody;
 
 public class HttpRequest {
-    private static final MediaType JSON
-            = MediaType.parse("application/json; charset=utf-8");
-
-    public ResponseBody get(HttpObject requestObject, String url) throws IOException {
+    public String get(HttpObject requestObject) throws IOException {
         OkHttpClient client = new OkHttpClient();
 
-        Request request = createRequest(requestObject, url);
-        return client.newCall(request).execute().body();
-
+        Request request = createRequest(requestObject);
+        return Objects.requireNonNull(client.newCall(request).execute().body()).string();
     }
 
     //helper methods
 
-    private Request createRequest(HttpObject request, String url){
-        switch (request.getType()) {
+    private Request createRequest(HttpObject request){
+        String url = request.getUrl();
+        switch (request.getRequestType()) {
             case GET:
                 return new Request.Builder()
                         .url(url)
@@ -66,6 +63,6 @@ public class HttpRequest {
     }
 
     private RequestBody getBody(HttpObject request){
-        return RequestBody.create(JSON, request.getBody());
+        return RequestBody.create(MediaType.get(request.getMediaType().getValue()), request.getBody());
     }
 }

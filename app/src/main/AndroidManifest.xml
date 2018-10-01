@@ -2,11 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.peer2pay.peer2pay">
 
-    <!-- To auto-complete the email text field in the login form with the user's emails -->
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.READ_PROFILE" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
-
     <application
         android:name=".appPages.MyApplication"
         android:allowBackup="true"
@@ -18,17 +13,18 @@
         <activity android:name=".appPages.Menu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".appPages.ConfigureCards" />
         <activity android:name=".appPages.Pay" />
         <activity android:name=".appPages.Receive" />
-        <activity
-            android:name=".appPages.Auth"
-            android:label="@string/title_activity_auth" />
         <activity android:name=".appPages.AddCard" />
-        <activity android:name=".appPages.Setup"></activity>
+        <activity android:name=".appPages.Setup" />
+        <activity
+            android:name=".appPages.AddForm"
+            android:label="@string/title_activity_add_form"></activity>
     </application>
 
 </manifest>

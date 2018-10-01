@@ -8,7 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.peer2pay.peer2pay.R;
-import com.peer2pay.peer2pay.helperClasses.MyAdapter;
+import com.peer2pay.peer2pay.helperClasses.utils.MyAdapter;
 import com.peer2pay.peer2pay.helperClasses.utils.fileManagement.storage.CardFileManagement;
 
 import java.util.List;
@@ -44,7 +44,7 @@ public class ConfigureCards extends AppCompatActivity {
     }
 
     public void add_card(View view){
-        Intent add_card_intent = new Intent(this, AddCard.class);
+        Intent add_card_intent = new Intent(this, AddForm.class);
         startActivity(add_card_intent);
     }
 }

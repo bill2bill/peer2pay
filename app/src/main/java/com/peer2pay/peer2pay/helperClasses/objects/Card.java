@@ -63,34 +63,4 @@ public class Card {
     private int getCountID() {
         return countID;
     }
-
-
-    //setters
-    public void setToken(String token) {
-        this.token = token;
-    }
-
-    public void setUser(String user) {
-        this.user = user;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    private void setExpiration(String expiration) {
-        this.expiration = expiration;
-    }
-
-    private void setCardType(String cardType) {
-        this.cardType = cardType;
-    }
-
-    private void setDate(String date) {
-        this.expiration = date;
-    }
-
-    private void setCountID(int countID) {
-        this.countID = countID;
-    }
 }

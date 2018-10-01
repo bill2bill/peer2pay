@@ -5,7 +5,7 @@ import com.peer2pay.peer2pay.helperClasses.objects.Card;
 
 import java.io.IOException;
 
-public class CardParser extends JsonParser {
+public class CardParser extends Parser {
     private ObjectMapper mapper = new ObjectMapper();
 
     public Card parseCard(String json){

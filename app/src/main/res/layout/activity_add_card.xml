@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="23dp"
         android:ems="10"
         android:hint="@string/post_code"
         android:inputType="textPostalAddress"
@@ -33,32 +33,6 @@
         app:layout_constraintStart_toEndOf="@+id/cvc"
         app:layout_constraintTop_toBottomOf="@+id/card_number"
         tools:text="@string/expire" />
-
-    <EditText
-        android:id="@+id/account_number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="@string/account_number"
-        android:inputType="number"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sortcode"
-        tools:text="@string/account_number" />
-
-    <EditText
-        android:id="@+id/sortcode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="195dp"
-        android:layout_marginStart="16dp"
-        android:ems="10"
-        android:hint="@string/sortcode"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="@string/sortcode" />
 
     <EditText
         android:id="@+id/cvc"
@@ -91,34 +65,15 @@
 
     <Button
         android:id="@+id/submit"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="31dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginStart="13dp"
         android:onClick="submit"
-        android:text="@string/submit"
+        android:text="@string/add_card"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <EditText
-        android:id="@+id/key"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="33dp"
-        android:layout_marginStart="16dp"
-        android:ems="10"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/valid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="31dp"
-        app:layout_constraintEnd_toStartOf="@+id/submit"
-        app:layout_constraintStart_toStartOf="@+id/submit"
-        app:layout_constraintTop_toTopOf="@+id/account_number" />
 
 </android.support.constraint.ConstraintLayout>
